@@ -3,6 +3,13 @@ Ruby_Mastermind with AI
 
 Run main.rb to play
 
+AI winrate:
+4 turns game - 90%
+5 turns game - 99%
+6 turns game - 100%
+
+An average 3.5 turns to solve 
+
 # How AI guess?
 
 The hidden code can be pictured as a Two Dimensional Array 
