@@ -1,3 +1,4 @@
+
 class Ai
   attr_reader :initial_guess
   def initialize
@@ -8,7 +9,6 @@ class Ai
 
   def hack(array)
     @right_digits = []
-    @wrong_digits = []
     @yellow_digits = []
     output = @initial_guess
     
@@ -16,7 +16,6 @@ class Ai
     array.each_with_index do |item, index|
       
       if item[/31/]# red
-        @wrong_digits << item[/(?<=m)./]
         @avalible_guesses.each_with_index do |a, i|
           @avalible_guesses[i] -= [item[/(?<=m)./]] if a.is_a?(Array)
         end
@@ -25,7 +24,7 @@ class Ai
       
       
       if item[/32/]# green
-        @right_digits[index] = item[/(?<=m)./]
+        @right_digits << item[/(?<=m)./]
         @avalible_guesses[index] = item[/(?<=m)./]
       end
 
@@ -51,6 +50,9 @@ class Ai
       end
 
     end
+    puts @avalible_guesses.to_s
+    puts @right_digits.to_s
+    puts @yellow_digits.to_s
     output
   end
 end
