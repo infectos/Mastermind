@@ -50,9 +50,7 @@ class Ai
       end
 
     end
-    puts @avalible_guesses.to_s
-    puts @right_digits.to_s
-    puts @yellow_digits.to_s
+    
     output
   end
 end
