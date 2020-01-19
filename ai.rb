@@ -45,7 +45,7 @@ class Ai
         maybe_digits = @yellow_digits & item
         maybe_digits -= checked_digits
         maybe_digits = item - @right_digits - checked_digits if maybe_digits.length == 0
-        maybe_digits = item - checked_digits if maybe_digits.length == 0
+        maybe_digits = item if maybe_digits.length == 0
         output[index] = maybe_digits[rand(maybe_digits.length)]
         checked_digits<<output[index]
       end

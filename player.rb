@@ -20,6 +20,7 @@ class Player
       puts "Invalid code. It must contain 4 digits from 1 to 6."
       @code = gets.chomp
     end
+    puts ""
     puts "The code has been accepted".cyan
     return @code.split('')
   end

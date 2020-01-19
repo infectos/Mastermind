@@ -29,6 +29,8 @@ class Game
   end
 
   def intro
+    puts ""
+    puts "New game!"
     puts "Do you want to #{"decode(1)".cyan} or to #{"code(2)".cyan}"
     answer = gets.chomp
     case answer
@@ -54,7 +56,7 @@ class Game
       @rounds_left -= 1
       self.hint
     end
-
+    puts ""
     puts self.won? ? "You've won!" : "You've lost!"
     self.outro
   end
