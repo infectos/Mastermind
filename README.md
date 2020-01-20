@@ -25,7 +25,7 @@ If digit is green then it must be left as it is. The method locks current index 
 
 Then it makes the guess with following rules:
 
-Furstly, yellow digits hold in @yellow_digits array must be cheked in other positions.
+Firstly, yellow digits hold in @yellow_digits array must be cheked in other positions.
 
 Seconly, you need to try as many digit as you can, so you open all the numbers during two first guesses.
 In one guess you also want to try as many digit as you can. So variable "checked_digits" preventing you from creating the code that consists of repeated numbers. You need something like this (6532) as your guess, not like this (2333). In some cases repeated numbers cannot be avoided. 
